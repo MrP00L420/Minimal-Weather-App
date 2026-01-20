@@ -1,0 +1,69 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+/ios/Flutter/App.framework
+/ios/Flutter/engine
+/ios/Flutter/flutter_assets
+/ios/Flutter/.last_build_id
+/ios/.symlinks
+/ios/Pods
+/ios/Runner.xcworkspace/contents.xcworkspacedata
+/ios/Runner.xcworkspace/xcshareddata/
+/ios/Runner.xcodeproj/project.xcworkspace/
+/ios/Runner.xcodeproj/xcshareddata/
+/ios/Runner/Assets.xcassets/
+/ios/Runner/Base.lproj/
+/ios/Runner/Info.plist
+/ios/Runner/Runner-Bridging-Header.h
+/ios/Runner/main.m
+/ios/Runner/AppDelegate.h
+/ios/Runner/AppDelegate.m
+/ios/Flutter/Debug.xcconfig
+/ios/Flutter/Release.xcconfig
+/ios/Generated.xcconfig
+/ios/Plugin-Registrant-metadata.json
+/ios/Key.swift
+
+# Android
+/android/key.properties
+/android/local.properties
+/android/.gradle
+/android/app/src/main/assets/flutter_assets
+/android/app/build
+/android/build
+/android/gradle
+/android/gradlew
+/android/gradlew.bat
+/android/app/google-services.json
+
+# Gemini
+GEMINI.md
+blueprint.md
+
+# Environment
+.env
