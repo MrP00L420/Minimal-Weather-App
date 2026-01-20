@@ -1,7 +1,10 @@
+import 'dart:nativewrappers/_internal/vm/lib/ffi_patch.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:myapp/model/weather_model.dart';
 import 'package:myapp/services/weather_service.dart';
+import 'package:lottie/lottie.dart';
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({super.key});
@@ -36,6 +39,29 @@ class _WeatherPageState extends State<WeatherPage> {
   }
 
   // Animation
+  String getWeatherAnimation(String? mainCondition) {
+    if (mainCondition == null) return 'assets/sunny.json'; //default
+
+    switch (mainCondition) {
+      case 'clouds':
+      case 'mist':
+      case 'haze':
+      case 'fog':
+      case 'dust':
+        return 'assests/cloud.json';
+      case 'rain':
+        return 'assets/rainy.json';
+      case 'drizzle':
+      case 'shower rain':
+        return 'assets/partly_shower.json';
+      case 'thunderstorm':
+        return 'assets/storm.json';
+      case 'clear':
+        return 'assets/sunny.json';
+      default:
+        return 'assets/sunny.json';
+    }
+  }
 
   //intialize state
   @override
@@ -58,9 +84,18 @@ class _WeatherPageState extends State<WeatherPage> {
               style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
             ),
 
+            //Animation
+            Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
+
             //Temperature
             Text(
               _weather != null ? '${_weather!.temperature.round()} °C' : '',
+              style: const TextStyle(fontSize: 80),
+            ),
+
+            //Weather Condition
+            Text(
+              _weather?.mainCondition ?? '',
               style: const TextStyle(fontSize: 80),
             ),
           ],
