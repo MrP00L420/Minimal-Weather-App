@@ -21,7 +21,7 @@ A simple Flutter application that displays the current weather for the user's lo
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/weather-app.git
+    git clone https://github.com/MrP00L420/weather-app.git
     ```
 
 2.  Install the dependencies:
@@ -49,4 +49,5 @@ A simple Flutter application that displays the current weather for the user's lo
 *   `geolocator`
 *   `geocoding`
 *   `flutter_dotenv`
+*   `lottie`
 
